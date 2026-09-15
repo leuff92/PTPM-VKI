@@ -1,0 +1,10 @@
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# PyCharm local project settings
+.idea/
+
+# Runtime logs (the directory itself is retained via logs/.gitkeep)
+logs/*.log
