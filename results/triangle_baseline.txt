@@ -1,0 +1,128 @@
+test_close_but_distinct_sides_stay_scalene (tests.test_triangle.TriangleTests.test_close_but_distinct_sides_stay_scalene) ... FAIL
+test_decimal_comma_returns_text_error (tests.test_triangle.TriangleTests.test_decimal_comma_returns_text_error) ... ok
+test_decimal_sides_are_accepted (tests.test_triangle.TriangleTests.test_decimal_sides_are_accepted) ... ok
+test_degenerate_largest_a_is_rejected (tests.test_triangle.TriangleTests.test_degenerate_largest_a_is_rejected) ... ok
+test_degenerate_largest_b_is_rejected (tests.test_triangle.TriangleTests.test_degenerate_largest_b_is_rejected) ... ok
+test_degenerate_largest_c_is_rejected (tests.test_triangle.TriangleTests.test_degenerate_largest_c_is_rejected) ... ok
+test_empty_second_side_returns_text_error (tests.test_triangle.TriangleTests.test_empty_second_side_returns_text_error) ... ok
+test_equal_a_b_return_isosceles (tests.test_triangle.TriangleTests.test_equal_a_b_return_isosceles) ... ok
+test_equal_a_c_return_isosceles (tests.test_triangle.TriangleTests.test_equal_a_c_return_isosceles) ... ok
+test_equal_b_c_return_isosceles (tests.test_triangle.TriangleTests.test_equal_b_c_return_isosceles) ... ok
+test_equal_sides_return_equilateral (tests.test_triangle.TriangleTests.test_equal_sides_return_equilateral) ... ok
+test_equilateral_vertices_have_nonzero_area (tests.test_triangle.TriangleTests.test_equilateral_vertices_have_nonzero_area) ... ok
+test_error_coordinate_lists_are_independent (tests.test_triangle.TriangleTests.test_error_coordinate_lists_are_independent) ... ok
+test_extreme_ratio_does_not_divide_by_zero (tests.test_triangle.TriangleTests.test_extreme_ratio_does_not_divide_by_zero) ... FAIL
+test_float_overflow_returns_numeric_error (tests.test_triangle.TriangleTests.test_float_overflow_returns_numeric_error) ... ok
+test_letter_in_first_side_returns_text_error (tests.test_triangle.TriangleTests.test_letter_in_first_side_returns_text_error) ... ok
+test_letter_in_third_side_returns_text_error (tests.test_triangle.TriangleTests.test_letter_in_third_side_returns_text_error) ... ok
+test_nan_returns_numeric_error (tests.test_triangle.TriangleTests.test_nan_returns_numeric_error) ... ok
+test_negative_infinity_returns_numeric_error (tests.test_triangle.TriangleTests.test_negative_infinity_returns_numeric_error) ... ok
+test_negative_side_is_rejected (tests.test_triangle.TriangleTests.test_negative_side_is_rejected) ... ok
+test_none_returns_text_error (tests.test_triangle.TriangleTests.test_none_returns_text_error) ... ok
+test_obtuse_triangle_fits_canvas (tests.test_triangle.TriangleTests.test_obtuse_triangle_fits_canvas) ... ok
+test_positive_infinity_returns_numeric_error (tests.test_triangle.TriangleTests.test_positive_infinity_returns_numeric_error) ... ok
+test_scaling_input_does_not_change_pixel_coordinates (tests.test_triangle.TriangleTests.test_scaling_input_does_not_change_pixel_coordinates) ... ok
+test_scientific_notation_is_accepted (tests.test_triangle.TriangleTests.test_scientific_notation_is_accepted) ... ok
+test_short_base_is_not_lost_in_triangle_inequality (tests.test_triangle.TriangleTests.test_short_base_is_not_lost_in_triangle_inequality) ... FAIL
+test_subnormal_sides_keep_their_type (tests.test_triangle.TriangleTests.test_subnormal_sides_keep_their_type) ... FAIL
+test_success_log_contains_input_and_result (tests.test_triangle.TriangleTests.test_success_log_contains_input_and_result) ... ok
+test_sum_below_largest_side_is_rejected (tests.test_triangle.TriangleTests.test_sum_below_largest_side_is_rejected) ... ok
+test_surrounding_whitespace_is_accepted (tests.test_triangle.TriangleTests.test_surrounding_whitespace_is_accepted) ... ok
+test_three_different_sides_return_scalene (tests.test_triangle.TriangleTests.test_three_different_sides_return_scalene) ... ok
+test_tiny_isosceles_sides_stay_isosceles (tests.test_triangle.TriangleTests.test_tiny_isosceles_sides_stay_isosceles) ... FAIL
+test_tiny_scalene_sides_stay_scalene (tests.test_triangle.TriangleTests.test_tiny_scalene_sides_stay_scalene) ... FAIL
+test_unexpected_geometry_error_records_traceback (tests.test_triangle.TriangleTests.test_unexpected_geometry_error_records_traceback) ... ok
+test_value_just_inside_triangle_boundary_is_accepted (tests.test_triangle.TriangleTests.test_value_just_inside_triangle_boundary_is_accepted) ... ok
+test_value_just_outside_triangle_boundary_is_rejected (tests.test_triangle.TriangleTests.test_value_just_outside_triangle_boundary_is_rejected) ... ok
+test_vertices_preserve_side_ratios_after_rounding (tests.test_triangle.TriangleTests.test_vertices_preserve_side_ratios_after_rounding) ... ok
+test_very_large_sides_do_not_overflow_geometry (tests.test_triangle.TriangleTests.test_very_large_sides_do_not_overflow_geometry) ... ok
+test_zero_side_is_rejected (tests.test_triangle.TriangleTests.test_zero_side_is_rejected) ... ok
+
+======================================================================
+FAIL: test_close_but_distinct_sides_stay_scalene (tests.test_triangle.TriangleTests.test_close_but_distinct_sides_stay_scalene)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 115, in test_close_but_distinct_sides_stay_scalene
+    self.assert_kind(("1", "1.0000000001", "1.0000000002"), "разносторонний")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'равносторонний' != 'разносторонний'
+- равносторонний
+?   ^
++ разносторонний
+?   ^
+
+
+======================================================================
+FAIL: test_extreme_ratio_does_not_divide_by_zero (tests.test_triangle.TriangleTests.test_extreme_ratio_does_not_divide_by_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 127, in test_extreme_ratio_does_not_divide_by_zero
+    self.assert_kind(("1e-300", "1e300", "1e300"), "равнобедренный")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'не треугольник' != 'равнобедренный'
+- не треугольник
++ равнобедренный
+
+
+======================================================================
+FAIL: test_short_base_is_not_lost_in_triangle_inequality (tests.test_triangle.TriangleTests.test_short_base_is_not_lost_in_triangle_inequality)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 124, in test_short_base_is_not_lost_in_triangle_inequality
+    self.assert_kind(("1e-300", "1", "1"), "равнобедренный")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'не треугольник' != 'равнобедренный'
+- не треугольник
++ равнобедренный
+
+
+======================================================================
+FAIL: test_subnormal_sides_keep_their_type (tests.test_triangle.TriangleTests.test_subnormal_sides_keep_their_type)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 121, in test_subnormal_sides_keep_their_type
+    self.assert_kind(("3e-320", "4e-320", "5e-320"), "разносторонний")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'равносторонний' != 'разносторонний'
+- равносторонний
+?   ^
++ разносторонний
+?   ^
+
+
+======================================================================
+FAIL: test_tiny_isosceles_sides_stay_isosceles (tests.test_triangle.TriangleTests.test_tiny_isosceles_sides_stay_isosceles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 112, in test_tiny_isosceles_sides_stay_isosceles
+    self.assert_kind(("5e-15", "5e-15", "6e-15"), "равнобедренный")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'равносторонний' != 'равнобедренный'
+- равносторонний
++ равнобедренный
+
+
+======================================================================
+FAIL: test_tiny_scalene_sides_stay_scalene (tests.test_triangle.TriangleTests.test_tiny_scalene_sides_stay_scalene)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 109, in test_tiny_scalene_sides_stay_scalene
+    self.assert_kind(("3e-15", "4e-15", "5e-15"), "разносторонний")
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_triangle.py", line 13, in assert_kind
+    self.assertEqual(kind, expected)
+AssertionError: 'равносторонний' != 'разносторонний'
+- равносторонний
+?   ^
++ разносторонний
+?   ^
+
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.007s
+
+FAILED (failures=6)

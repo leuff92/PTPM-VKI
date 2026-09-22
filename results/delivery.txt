@@ -1,0 +1,292 @@
+test_1001_kilometres_require_three_days (tests.test_delivery.DeliveryTests.test_1001_kilometres_require_three_days) ... FAIL
+test_4999_kilometres_require_ten_days (tests.test_delivery.DeliveryTests.test_4999_kilometres_require_ten_days) ... FAIL
+test_500_kilometre_express_delivery_takes_one_day (tests.test_delivery.DeliveryTests.test_500_kilometre_express_delivery_takes_one_day) ... FAIL
+test_501_kilometres_require_two_days (tests.test_delivery.DeliveryTests.test_501_kilometres_require_two_days) ... FAIL
+test_999_kilometres_require_two_days (tests.test_delivery.DeliveryTests.test_999_kilometres_require_two_days) ... FAIL
+test_boolean_distance_is_rejected (tests.test_delivery.DeliveryTests.test_boolean_distance_is_rejected) ... FAIL
+test_boolean_weight_is_rejected (tests.test_delivery.DeliveryTests.test_boolean_weight_is_rejected) ... FAIL
+test_dangerous_package_adds_one_thousand (tests.test_delivery.DeliveryTests.test_dangerous_package_adds_one_thousand) ... ok
+test_dangerous_surcharge_is_added_after_weight_multiplier (tests.test_delivery.DeliveryTests.test_dangerous_surcharge_is_added_after_weight_multiplier) ... ok
+test_default_delivery_equals_explicit_non_express (tests.test_delivery.DeliveryTests.test_default_delivery_equals_explicit_non_express) ... ok
+test_distance_above_maximum_is_rejected (tests.test_delivery.DeliveryTests.test_distance_above_maximum_is_rejected) ... ok
+test_express_cost_exceeds_regular_cost (tests.test_delivery.DeliveryTests.test_express_cost_exceeds_regular_cost) ... FAIL
+test_express_fragile_cost_exceeds_regular_cost (tests.test_delivery.DeliveryTests.test_express_fragile_cost_exceeds_regular_cost) ... FAIL
+test_five_day_express_route_rounds_up_to_three_days (tests.test_delivery.DeliveryTests.test_five_day_express_route_rounds_up_to_three_days) ... FAIL
+test_five_hundred_kilometres_take_one_day (tests.test_delivery.DeliveryTests.test_five_hundred_kilometres_take_one_day) ... ok
+test_fractional_distance_is_rejected (tests.test_delivery.DeliveryTests.test_fractional_distance_is_rejected) ... FAIL
+test_fragile_package_adds_three_hundred (tests.test_delivery.DeliveryTests.test_fragile_package_adds_three_hundred) ... ok
+test_fragile_surcharge_is_added_after_weight_multiplier (tests.test_delivery.DeliveryTests.test_fragile_surcharge_is_added_after_weight_multiplier) ... ok
+test_infinite_distance_is_rejected (tests.test_delivery.DeliveryTests.test_infinite_distance_is_rejected) ... ok
+test_infinite_weight_is_rejected (tests.test_delivery.DeliveryTests.test_infinite_weight_is_rejected) ... ok
+test_maximum_distance_is_accepted (tests.test_delivery.DeliveryTests.test_maximum_distance_is_accepted) ... ok
+test_maximum_weight_is_accepted (tests.test_delivery.DeliveryTests.test_maximum_weight_is_accepted) ... ok
+test_minimum_distance_is_accepted (tests.test_delivery.DeliveryTests.test_minimum_distance_is_accepted) ... ok
+test_minimum_weight_is_accepted (tests.test_delivery.DeliveryTests.test_minimum_weight_is_accepted) ... ok
+test_nan_distance_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_nan_distance_is_rejected_without_exception) ... ERROR
+test_nan_weight_is_rejected (tests.test_delivery.DeliveryTests.test_nan_weight_is_rejected) ... FAIL
+test_negative_weight_is_rejected (tests.test_delivery.DeliveryTests.test_negative_weight_is_rejected) ... ok
+test_none_weight_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_none_weight_is_rejected_without_exception) ... ERROR
+test_one_thousand_kilometres_take_two_days (tests.test_delivery.DeliveryTests.test_one_thousand_kilometres_take_two_days) ... ok
+test_short_express_delivery_takes_at_least_one_day (tests.test_delivery.DeliveryTests.test_short_express_delivery_takes_at_least_one_day) ... FAIL
+test_string_distance_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_string_distance_is_rejected_without_exception) ... ERROR
+test_string_express_flag_is_rejected (tests.test_delivery.DeliveryTests.test_string_express_flag_is_rejected) ... FAIL
+test_string_weight_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_string_weight_is_rejected_without_exception) ... ERROR
+test_three_day_express_route_rounds_up_to_two_days (tests.test_delivery.DeliveryTests.test_three_day_express_route_rounds_up_to_two_days) ... FAIL
+test_unknown_package_type_is_rejected (tests.test_delivery.DeliveryTests.test_unknown_package_type_is_rejected) ... ok
+test_weight_above_maximum_is_rejected (tests.test_delivery.DeliveryTests.test_weight_above_maximum_is_rejected) ... ok
+test_weight_below_minimum_is_rejected (tests.test_delivery.DeliveryTests.test_weight_below_minimum_is_rejected) ... ok
+test_weight_exactly_five_has_no_surcharge (tests.test_delivery.DeliveryTests.test_weight_exactly_five_has_no_surcharge) ... ok
+test_weight_exactly_twenty_adds_fifty_percent (tests.test_delivery.DeliveryTests.test_weight_exactly_twenty_adds_fifty_percent) ... ok
+test_weight_just_above_five_adds_twenty_percent (tests.test_delivery.DeliveryTests.test_weight_just_above_five_adds_twenty_percent) ... ok
+test_weight_just_below_five_has_no_surcharge (tests.test_delivery.DeliveryTests.test_weight_just_below_five_has_no_surcharge) ... ok
+test_weight_just_below_twenty_adds_twenty_percent (tests.test_delivery.DeliveryTests.test_weight_just_below_twenty_adds_twenty_percent) ... ok
+test_zero_distance_is_rejected (tests.test_delivery.DeliveryTests.test_zero_distance_is_rejected) ... ok
+test_zero_weight_is_rejected (tests.test_delivery.DeliveryTests.test_zero_weight_is_rejected) ... ok
+
+======================================================================
+ERROR: test_nan_distance_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_nan_distance_is_rejected_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 125, in test_nan_distance_is_rejected_without_exception
+    self.assertEqual(calculate(1, float("nan"), "обычный"), (-1, "0000-00-00"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\Delivery.py", line 48, in calculate_delivery_cost
+    return int(total_cost), delivery_date.strftime("%Y-%m-%d")
+           ^^^^^^^^^^^^^^^
+ValueError: cannot convert float NaN to integer
+
+======================================================================
+ERROR: test_none_weight_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_none_weight_is_rejected_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 134, in test_none_weight_is_rejected_without_exception
+    self.assertEqual(calculate(None, 100, "обычный"), (-1, "0000-00-00"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\Delivery.py", line 12, in calculate_delivery_cost
+    if weight < 0.1 or weight > 50.0 or distance < 1 or distance > 5000:
+       ^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'float'
+
+======================================================================
+ERROR: test_string_distance_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_string_distance_is_rejected_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 131, in test_string_distance_is_rejected_without_exception
+    self.assertEqual(calculate(1, "100", "обычный"), (-1, "0000-00-00"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\Delivery.py", line 12, in calculate_delivery_cost
+    if weight < 0.1 or weight > 50.0 or distance < 1 or distance > 5000:
+                                        ^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+======================================================================
+ERROR: test_string_weight_is_rejected_without_exception (tests.test_delivery.DeliveryTests.test_string_weight_is_rejected_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 128, in test_string_weight_is_rejected_without_exception
+    self.assertEqual(calculate("1", 100, "обычный"), (-1, "0000-00-00"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\Delivery.py", line 12, in calculate_delivery_cost
+    if weight < 0.1 or weight > 50.0 or distance < 1 or distance > 5000:
+       ^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'float'
+
+======================================================================
+FAIL: test_1001_kilometres_require_three_days (tests.test_delivery.DeliveryTests.test_1001_kilometres_require_three_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 96, in test_1001_kilometres_require_three_days
+    self.assertEqual(calculate(1, 1001, "обычный")[1], "2026-09-06")
+AssertionError: '2026-09-05' != '2026-09-06'
+- 2026-09-05
+?          ^
++ 2026-09-06
+?          ^
+
+
+======================================================================
+FAIL: test_4999_kilometres_require_ten_days (tests.test_delivery.DeliveryTests.test_4999_kilometres_require_ten_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 99, in test_4999_kilometres_require_ten_days
+    self.assertEqual(calculate(1, 4999, "обычный")[1], "2026-09-13")
+AssertionError: '2026-09-12' != '2026-09-13'
+- 2026-09-12
+?          ^
++ 2026-09-13
+?          ^
+
+
+======================================================================
+FAIL: test_500_kilometre_express_delivery_takes_one_day (tests.test_delivery.DeliveryTests.test_500_kilometre_express_delivery_takes_one_day)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 113, in test_500_kilometre_express_delivery_takes_one_day
+    self.assertEqual(calculate(1, 500, "обычный", True)[1], "2026-09-04")
+AssertionError: '2026-09-03' != '2026-09-04'
+- 2026-09-03
+?          ^
++ 2026-09-04
+?          ^
+
+
+======================================================================
+FAIL: test_501_kilometres_require_two_days (tests.test_delivery.DeliveryTests.test_501_kilometres_require_two_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 90, in test_501_kilometres_require_two_days
+    self.assertEqual(calculate(1, 501, "обычный")[1], "2026-09-05")
+AssertionError: '2026-09-04' != '2026-09-05'
+- 2026-09-04
+?          ^
++ 2026-09-05
+?          ^
+
+
+======================================================================
+FAIL: test_999_kilometres_require_two_days (tests.test_delivery.DeliveryTests.test_999_kilometres_require_two_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 93, in test_999_kilometres_require_two_days
+    self.assertEqual(calculate(1, 999, "обычный")[1], "2026-09-05")
+AssertionError: '2026-09-04' != '2026-09-05'
+- 2026-09-04
+?          ^
++ 2026-09-05
+?          ^
+
+
+======================================================================
+FAIL: test_boolean_distance_is_rejected (tests.test_delivery.DeliveryTests.test_boolean_distance_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 143, in test_boolean_distance_is_rejected
+    self.assertEqual(calculate(1, True, "обычный"), (-1, "0000-00-00"))
+AssertionError: Tuples differ: (205, '2026-09-04') != (-1, '0000-00-00')
+
+First differing element 0:
+205
+-1
+
+- (205, '2026-09-04')
++ (-1, '0000-00-00')
+
+======================================================================
+FAIL: test_boolean_weight_is_rejected (tests.test_delivery.DeliveryTests.test_boolean_weight_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 140, in test_boolean_weight_is_rejected
+    self.assertEqual(calculate(True, 100, "обычный"), (-1, "0000-00-00"))
+AssertionError: Tuples differ: (700, '2026-09-04') != (-1, '0000-00-00')
+
+First differing element 0:
+700
+-1
+
+- (700, '2026-09-04')
++ (-1, '0000-00-00')
+
+======================================================================
+FAIL: test_express_cost_exceeds_regular_cost (tests.test_delivery.DeliveryTests.test_express_cost_exceeds_regular_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 103, in test_express_cost_exceeds_regular_cost
+    self.assertGreater(calculate(1, 1000, "обычный", True)[0], calculate(1, 1000, "обычный")[0])
+AssertionError: 2600 not greater than 5200
+
+======================================================================
+FAIL: test_express_fragile_cost_exceeds_regular_cost (tests.test_delivery.DeliveryTests.test_express_fragile_cost_exceeds_regular_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 106, in test_express_fragile_cost_exceeds_regular_cost
+    self.assertGreater(calculate(10, 1000, "хрупкий", True)[0], calculate(10, 1000, "хрупкий")[0])
+AssertionError: 3270 not greater than 6540
+
+======================================================================
+FAIL: test_five_day_express_route_rounds_up_to_three_days (tests.test_delivery.DeliveryTests.test_five_day_express_route_rounds_up_to_three_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 119, in test_five_day_express_route_rounds_up_to_three_days
+    self.assertEqual(calculate(1, 2500, "обычный", True)[1], "2026-09-06")
+AssertionError: '2026-09-05' != '2026-09-06'
+- 2026-09-05
+?          ^
++ 2026-09-06
+?          ^
+
+
+======================================================================
+FAIL: test_fractional_distance_is_rejected (tests.test_delivery.DeliveryTests.test_fractional_distance_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 137, in test_fractional_distance_is_rejected
+    self.assertEqual(calculate(1, 100.5, "обычный"), (-1, "0000-00-00"))
+AssertionError: Tuples differ: (702, '2026-09-04') != (-1, '0000-00-00')
+
+First differing element 0:
+702
+-1
+
+- (702, '2026-09-04')
++ (-1, '0000-00-00')
+
+======================================================================
+FAIL: test_nan_weight_is_rejected (tests.test_delivery.DeliveryTests.test_nan_weight_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 122, in test_nan_weight_is_rejected
+    self.assertEqual(calculate(float("nan"), 100, "обычный"), (-1, "0000-00-00"))
+AssertionError: Tuples differ: (700, '2026-09-04') != (-1, '0000-00-00')
+
+First differing element 0:
+700
+-1
+
+- (700, '2026-09-04')
++ (-1, '0000-00-00')
+
+======================================================================
+FAIL: test_short_express_delivery_takes_at_least_one_day (tests.test_delivery.DeliveryTests.test_short_express_delivery_takes_at_least_one_day)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 110, in test_short_express_delivery_takes_at_least_one_day
+    self.assertEqual(calculate(1, 1, "обычный", True)[1], "2026-09-04")
+AssertionError: '2026-09-03' != '2026-09-04'
+- 2026-09-03
+?          ^
++ 2026-09-04
+?          ^
+
+
+======================================================================
+FAIL: test_string_express_flag_is_rejected (tests.test_delivery.DeliveryTests.test_string_express_flag_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 146, in test_string_express_flag_is_rejected
+    self.assertEqual(calculate(1, 100, "обычный", "False"), (-1, "0000-00-00"))
+AssertionError: Tuples differ: (350, '2026-09-03') != (-1, '0000-00-00')
+
+First differing element 0:
+350
+-1
+
+- (350, '2026-09-03')
++ (-1, '0000-00-00')
+
+======================================================================
+FAIL: test_three_day_express_route_rounds_up_to_two_days (tests.test_delivery.DeliveryTests.test_three_day_express_route_rounds_up_to_two_days)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Super PC\Documents\ChatGPT\зуб\tests\test_delivery.py", line 116, in test_three_day_express_route_rounds_up_to_two_days
+    self.assertEqual(calculate(1, 1500, "обычный", True)[1], "2026-09-05")
+AssertionError: '2026-09-04' != '2026-09-05'
+- 2026-09-04
+?          ^
++ 2026-09-05
+?          ^
+
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.006s
+
+FAILED (failures=15, errors=4)

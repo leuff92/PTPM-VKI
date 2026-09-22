@@ -1,0 +1,2 @@
+# Optional: only needed to regenerate the Word report, not to run tests.
+python-docx==1.2.0

@@ -1,0 +1,41 @@
+{
+  "tested_at": "2026-09-23T00:20:39+07:00",
+  "python": "3.12.10",
+  "source_sha256_lf": {
+    "evidence/triangle_lab1.py": "e5a3e77db620bc24567d850fb23a7e78fcbc1325ad08e4edd029bad6e93125e9"
+  },
+  "suites": {
+    "triangle": {
+      "total": 39,
+      "passed": 33,
+      "failures": [
+        {
+          "test": "tests.test_triangle.TriangleTests.test_close_but_distinct_sides_stay_scalene",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 115, in test_close_but_distinct_sides_stay_scalene\n    self.assert_kind((\"1\", \"1.0000000001\", \"1.0000000002\"), \"разносторонний\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'равносторонний' != 'разносторонний'\n- равносторонний\n?   ^\n+ разносторонний\n?   ^\n\n"
+        },
+        {
+          "test": "tests.test_triangle.TriangleTests.test_extreme_ratio_does_not_divide_by_zero",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 127, in test_extreme_ratio_does_not_divide_by_zero\n    self.assert_kind((\"1e-300\", \"1e300\", \"1e300\"), \"равнобедренный\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'не треугольник' != 'равнобедренный'\n- не треугольник\n+ равнобедренный\n\n"
+        },
+        {
+          "test": "tests.test_triangle.TriangleTests.test_short_base_is_not_lost_in_triangle_inequality",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 124, in test_short_base_is_not_lost_in_triangle_inequality\n    self.assert_kind((\"1e-300\", \"1\", \"1\"), \"равнобедренный\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'не треугольник' != 'равнобедренный'\n- не треугольник\n+ равнобедренный\n\n"
+        },
+        {
+          "test": "tests.test_triangle.TriangleTests.test_subnormal_sides_keep_their_type",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 121, in test_subnormal_sides_keep_their_type\n    self.assert_kind((\"3e-320\", \"4e-320\", \"5e-320\"), \"разносторонний\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'равносторонний' != 'разносторонний'\n- равносторонний\n?   ^\n+ разносторонний\n?   ^\n\n"
+        },
+        {
+          "test": "tests.test_triangle.TriangleTests.test_tiny_isosceles_sides_stay_isosceles",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 112, in test_tiny_isosceles_sides_stay_isosceles\n    self.assert_kind((\"5e-15\", \"5e-15\", \"6e-15\"), \"равнобедренный\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'равносторонний' != 'равнобедренный'\n- равносторонний\n+ равнобедренный\n\n"
+        },
+        {
+          "test": "tests.test_triangle.TriangleTests.test_tiny_scalene_sides_stay_scalene",
+          "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 109, in test_tiny_scalene_sides_stay_scalene\n    self.assert_kind((\"3e-15\", \"4e-15\", \"5e-15\"), \"разносторонний\")\n  File \"C:\\Users\\Super PC\\Documents\\ChatGPT\\зуб\\tests\\test_triangle.py\", line 13, in assert_kind\n    self.assertEqual(kind, expected)\nAssertionError: 'равносторонний' != 'разносторонний'\n- равносторонний\n?   ^\n+ разносторонний\n?   ^\n\n"
+        }
+      ],
+      "errors": [],
+      "skipped": 0
+    }
+  }
+}
