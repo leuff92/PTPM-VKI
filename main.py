@@ -1,4 +1,4 @@
-"""Console entry point for laboratory work No. 1."""
+
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from triangle import classify_triangle
 
 
 def configure_logging() -> None:
-    """Configure simultaneous UTF-8 file and console logging."""
+
 
     log_directory = Path(__file__).parent / "logs"
     log_directory.mkdir(exist_ok=True)
@@ -32,7 +32,7 @@ def configure_logging() -> None:
 
 
 def main() -> None:
-    """Read three side lengths, calculate the result and print it."""
+
 
     configure_logging()
     side_a = input("Введите сторону A: ")
