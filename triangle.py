@@ -1,4 +1,4 @@
-"""Business logic for laboratory work No. 1 (triangle classification)."""
+
 
 from __future__ import annotations
 
@@ -16,12 +16,7 @@ TEXT_ERROR_COORDINATES: Final[list[tuple[int, int]]] = [(-2, -2)] * 3
 def classify_triangle(
     side_a: str, side_b: str, side_c: str
 ) -> tuple[str, list[tuple[int, int]]]:
-    """Return a triangle kind and coordinates for three string side lengths.
-
-    The side convention is ``AB = a``, ``BC = b`` and ``CA = c``.  Valid
-    coordinates are scaled to the 100 x 100 canvas.  A non-numeric input is
-    distinguished from an invalid numeric input, as required by the task.
-    """
+    
 
     raw_sides = (side_a, side_b, side_c)
     try:
@@ -69,7 +64,7 @@ def classify_triangle(
 
 
 def _forms_triangle(sides: tuple[float, float, float]) -> bool:
-    """Validate finiteness, positivity and the strict triangle inequality."""
+    
 
     if not all(math.isfinite(side) and side > 0 for side in sides):
         return False
@@ -80,8 +75,7 @@ def _forms_triangle(sides: tuple[float, float, float]) -> bool:
 
 
 def _triangle_kind(sides: tuple[float, float, float]) -> str:
-    """Classify the actual float values, without changing unequal side lengths."""
-
+    
     a, b, c = sides
     if a == b == c:
         return "равносторонний"
@@ -91,7 +85,7 @@ def _triangle_kind(sides: tuple[float, float, float]) -> str:
 
 
 def _calculate_coordinates(sides: tuple[float, float, float]) -> list[tuple[int, int]]:
-    """Calculate integer vertex coordinates that fit into a 100 x 100 field."""
+    
 
     # Use the longest side as a unit base so it cannot underflow to zero.
     base_index = max(range(3), key=sides.__getitem__)
