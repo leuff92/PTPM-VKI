@@ -1,8 +1,4 @@
-"""Delivery tests against the unchanged teacher's module.
 
-The reconstructed contract and assumptions are in LAB2_RESULTS.md.
-Failing assertions are deliberately visible, never skipped or expectedFailure.
-"""
 
 import unittest
 
