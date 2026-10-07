@@ -1,4 +1,4 @@
-"""Checks of the public API from lab 1, including numerical regressions."""
+
 
 import math
 import unittest
