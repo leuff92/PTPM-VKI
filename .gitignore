@@ -1,0 +1,17 @@
+# Окружения, кэши и личные настройки PyCharm
+venv/
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+
+# Локальные данные приложения и измерений
+*.sqlite3
+*.sqlite3-journal
+.coverage
+.coverage.*
+.coverage-summary.json
+htmlcov/
+.qa/
+logs/
+~$*.docx
