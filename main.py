@@ -1,45 +1,31 @@
 import argparse
-import sqlite3
+from decimal import InvalidOperation
 from pathlib import Path
 
 import requests
 
-from src.database import DatabaseRepository
-from src.parser import ForumParser
+from src.parser import collect_products, save_csv
 
 
-ROOT = Path(__file__).resolve().parent
+def main() -> None:
+    arguments = argparse.ArgumentParser(description="Выгрузка каталога Books to Scrape")
+    arguments.add_argument("--pages", type=int, default=2, help="Сколько страниц скачать")
+    options = arguments.parse_args()
+    if options.pages < 1:
+        arguments.error("--pages должно быть не меньше 1")
 
-
-def main(argv=None) -> int:
-    arguments = argparse.ArgumentParser(description="Сбор сообщений учебного форума")
-    arguments.add_argument("--url", help="Адрес страницы с разметкой учебного форума")
-    arguments.add_argument("--db", default=str(ROOT / "comments.db"), help="Файл SQLite")
-    args = arguments.parse_args(argv)
-
+    output = Path(__file__).with_name("products.csv")
     try:
-        parser = ForumParser()
-        if args.url:
-            comments = parser.parse_page(args.url)
-        else:
-            html = (ROOT / "data" / "forum.html").read_text(encoding="utf-8")
-            comments = parser.parse_html(html)
+        products = collect_products(options.pages)
+        save_csv(products, output)
+    except (requests.RequestException, OSError, ValueError, InvalidOperation) as error:
+        arguments.exit(1, f"Ошибка выгрузки: {error}\n")
 
-        repository = DatabaseRepository(args.db)
-        try:
-            saved = parser.save_to_db(comments, repository)
-            print(f"Найдено сообщений: {len(comments)}")
-            print(f"Добавлено в базу: {saved}")
-            for comment in comments:
-                print(f"{comment['id']} | {comment['name']} | {comment['message']}")
-            print(f"База данных: {args.db}")
-        finally:
-            repository.close()
-    except (requests.RequestException, sqlite3.Error, OSError, TypeError, ValueError) as error:
-        print(f"Ошибка: {error}")
-        return 1
-    return 0
+    for product in products[:5]:
+        print(f"{product.title} — {product.price:.2f} GBP")
+    print(f"Выгружено товаров: {len(products)}")
+    print(f"Файл: {output.resolve()}")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
