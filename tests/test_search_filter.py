@@ -17,8 +17,8 @@ ALL_ROWS = [HOUSE_RENT, BANK_INTERNET, CASH_INTERNET, SALARY, POWER_BILL]
 class TestSearchFilter(unittest.TestCase):
     def setUp(self):
         options = webdriver.ChromeOptions()
-        if os.environ.get("LAB6_SHOW_BROWSER") != "1":
-            options.add_argument("--headless")
+        #if os.environ.get("LAB6_SHOW_BROWSER") != "1":
+       #     options.add_argument("--headless")
         options.add_argument("--window-size=1280,900")
         self.driver = webdriver.Chrome(options=options)
         try:
@@ -30,7 +30,10 @@ class TestSearchFilter(unittest.TestCase):
             raise
 
     def tearDown(self):
-        self.driver.quit()
+        try:
+            self._take_screenshot()
+        finally:
+            self.driver.quit()
 
     def test_initial_results(self):
         self.assertEqual(self.page.read_results(), ALL_ROWS)

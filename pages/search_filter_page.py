@@ -65,3 +65,15 @@ class SearchFilterPage:
             account, transaction_type, payee, amount = cells[1:]
             results.append((account.text, transaction_type.text, payee.text, amount.text))
         return results
+
+    def _take_screenshot(self):
+        if not self.driver:
+            return
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{self._testMethodName}_{timestamp}.png"
+        path = os.path.join(SCREENSHOT_DIR, filename)
+        try:
+            self.driver.save_screenshot(path)
+            print(f"\nScreenshot saved: {path}")
+        except Exception as e:
+            print(f"\nFailed to save screenshot: {e}")
